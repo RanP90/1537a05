@@ -1,0 +1,456 @@
+@font-face {
+  font-family: "Ubuntu", sans-serif;
+  src: url(sansation_light.woff);
+}
+
+a {
+  text-decoration-line: none;
+}
+
+.mobile_header {
+  display: none;
+}
+
+.container {
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+}
+
+.main_container {
+  display: grid;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  grid-template-rows: 2fr 0.3fr 0.3fr 0.1fr 2fr;
+  gap: 5px 5px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "main_img main_img main_img main_img"
+    "sub_nav sub_nav sub_nav sub_nav"
+    "btn-json btn-json btn-json btn-json"
+    "subscribe subscribe subscribe subscribe"
+    "item1 item2 item3 item4";
+}
+
+.button {
+  padding: 5px;
+  border: 1px solid salmon;
+  background-color: salmon;
+  border-radius: 16px;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.logo {
+  font-size: 35px;
+  padding: 10px;
+  top: -20%;
+  left: 30%;
+  bottom: 10%;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(163, 151, 198);
+  border-radius: 50%;
+}
+
+nav li {
+  display: flex;
+  justify-content: left;
+  font-size: larger;
+  padding: 10px;
+  margin: 0;
+  width: 100%;
+  border-radius: 16px;
+  border-radius: 16px;
+}
+
+aside {
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  justify-content: left;
+  text-align: center;
+}
+
+.main_img {
+  grid-area: main_img;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+.main_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.span1 {
+  padding: 10px 20px;
+  background-color: rgb(163, 151, 198);
+  color: white;
+  font-size: large;
+  text-align: center;
+  position: absolute;
+  left: 0%;
+  bottom: 30%;
+}
+
+.span2 {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  font-size: large;
+  text-align: center;
+  position: absolute;
+  left: 0%;
+  bottom: 10%;
+}
+
+.sub_nav {
+  grid-area: sub_nav;
+  background-color: rgb(163, 151, 198);
+}
+
+.sub_nav ul {
+  padding: 10;
+  margin: 0;
+  font-size: larger;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button {
+  width: 100px;
+  background-color: rgb(163, 151, 198);
+  border: none;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px;
+  cursor: pointer;
+}
+
+#btn-json{grid-area: btn-json;}
+
+.ajax-stuff{
+  font-size: small;
+  text-align: left;
+}
+
+.subscribe {
+  background-color: rgb(163, 151, 198);
+  padding: 10px;
+  grid-area: subscribe;
+}
+
+figure img {
+  width: 150px;
+  height: 150px;
+  border-radius: 16px;
+}
+
+figcaption {
+  padding-top: 10px;
+  color: blueviolet;
+  font-style: bold;
+}
+
+.status {
+  font-size: small;
+}
+
+.item1 {
+  grid-area: item1;
+  align-items: center;
+  font-size: small;
+}
+
+.item2 {
+  grid-area: item2;
+  align-items: center;
+  font-size: small;
+}
+
+.item3 {
+  grid-area: item3;
+  align-items: center;
+  font-size: small;
+}
+
+.item4 {
+  grid-area: item4;
+  align-items: center;
+  font-size: small;
+}
+
+header {
+  flex: 1;
+}
+
+section {
+  flex: 3;
+}
+
+footer {
+  font-family: "Ubuntu", sans-serif;
+  height: 5%;
+  width: 100%;
+  background-color: rgb(163, 151, 198);
+  margin: 0px 0px 0px 0px;
+  padding: 10px;
+}
+
+.copyright {
+  padding-left: 5%;
+  text-align: left;
+}
+
+.footer_icon {
+  padding-right: 5%;
+  text-align: right;
+}
+
+/* 701 to 1280 pixels wide range */
+@media screen and (min-width: 701px) and (max-width: 1280px) {
+  .container {
+    font-family: "Ubuntu", sans-serif;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main_container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: 1.9fr 1.2fr 0.3fr 0.1fr 0.3fr 2.9fr 0.3fr;
+    gap: 10px 5px;
+    grid-auto-flow: column;
+    grid-template-areas:
+      "main_img main_img main_img main_img"
+      "main_img main_img main_img main_img"
+      "sub_nav sub_nav sub_nav sub_nav"
+      "btn-json btn-json btn-json btn-json"
+      "subscribe subscribe subscribe subscribe"
+      "item1 item2 item3 item4"
+      "footer footer footer footer";
+  }
+
+  header {
+    flex: 1;
+  }
+
+  section {
+    flex: 3;
+  }
+
+  .logo {
+    font-size: 20px;
+    left: 10%;
+    bottom: 0%;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(163, 151, 198);
+    border-radius: 50%;
+  }
+
+  .container ul {
+    padding: 20;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    float: right;
+  }
+
+  .container ul li {
+    padding: 20;
+  }
+
+  aside {
+    display: none;
+  }
+
+  .main_img {
+    grid-area: main_img;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    background-color: black;
+  }
+
+  .span1 {
+    padding: 10px 20px;
+    background-color: rgb(163, 151, 198);
+    color: white;
+    font-size: large;
+    text-align: center;
+    position: absolute;
+    left: 0%;
+    bottom: 20%;
+  }
+
+  .span2 {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    font-size: large;
+    text-align: center;
+    position: absolute;
+    left: 0%;
+    bottom: 10%;
+  }
+
+  .sub_nav {
+    grid-area: sub_nav;
+  }
+
+  .sub_nav ul {
+    grid-area: sub_nav;
+    width: 100%;
+    padding: 20;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .subscribe {
+    grid-area: subscribe;
+  }
+
+  .item1 {
+    grid-area: item1;
+  }
+
+  .item2 {
+    grid-area: item2;
+  }
+
+  .item3 {
+    grid-area: item3;
+  }
+
+  .item4 {
+    grid-area: item4;
+  }
+
+  footer {
+    grid-area: footer;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+}
+
+/* 700 pixels wide and under */
+@media all and (max-width: 700px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    font-family: "Ubuntu", sans-serif;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main_container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 0.6fr 2.6fr 0.6fr 3fr 3fr 3fr 3fr;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "main_img"
+      "subscribe"
+      "item1"
+      "item2"
+      "item3"
+      "item4";
+  }
+
+  header {
+    flex: 1;
+  }
+
+  section {
+    flex: 3;
+  }
+
+  .logo {
+    font-size: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(163, 151, 198);
+    border-radius: 50%;
+  }
+
+  .container ul {
+    display: none;
+  }
+
+  aside {
+    display: none;
+  }
+
+  #btn-json{
+  grid-area: btn-json;
+}
+
+  .subscribe {
+    grid-area: subscribe;
+  }
+
+  .main_img {
+    grid-area: main_img;
+  }
+
+  figure img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .item1 {
+    grid-area: item1;
+  }
+
+  .item2 {
+    grid-area: item2;
+  }
+
+  .item3 {
+    grid-area: item3;
+  }
+
+  .item4 {
+    grid-area: item4;
+  }
+
+  footer {
+    grid-area: footer;
+    position: fixed;
+    bottom: 0;
+  }
+}

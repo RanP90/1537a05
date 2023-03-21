@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "name": "assignment05",
+  "description": "KYOUNGRAN PARK, A10331544, SET B, Feburary 25 2023\r This ASSIGNMENT IS [100]% COMPELTE.\r [explanation if not complete, what is working/not working]",
+  "version": "1.0.0",
+  "main": "assignment4.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
